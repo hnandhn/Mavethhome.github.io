@@ -1,0 +1,84 @@
+<DOCTYPE html>
+<html>
+  
+  //- AMAN
+.a._1
+.a._2
+.a._3
+  
+  <style>
+    *,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+html {
+	height: 100vh;
+	filter: blur(50px);
+	background: radial-gradient(farthest-corner at top, #e2a9e5, #632c65, #4b384c);
+	overflow: hidden;
+	animation: bg 10s alternate infinite both;
+	display: flex; justify-content: center; align-items: center;
+}
+@keyframes bg {
+	from {
+		background-position: 50em;
+		background-size: 50em;
+	}
+	to {
+		background-position: -50em;
+		background-size: 150em;
+	}
+}
+.a {
+	height: 50rem;
+	width: 50rem;
+	border-radius: 50%;
+	position: absolute;
+
+	&._1 {
+		animation: ap-1 7s alternate infinite both cubic-bezier(1,0.1,0.58,1);
+		background: radial-gradient(#4b384c, #632c65);
+z-index: 1;
+	}
+	&._2 {
+		animation: ap-2 4s alternate infinite both cubic-bezier(1,0.8,-0.1,1);
+		background: radial-gradient(#e2a9e5, #632c65);
+		z-index: 2;
+	}
+	&._3 {
+		animation: ap-3 6s alternate infinite both;
+		background: radial-gradient(#e2a9e5, #4b384c);
+		z-index: 4;
+	}
+}
+@keyframes ap-1 {
+	from {
+		left: - random(51) / 2 + px;
+	}
+	to {
+		left: random(2) * 4 + em;
+	}
+}
+@keyframes ap-2 {
+	from {
+		left: - random(50) / 16 + em;
+		top: - random(2) - 14 + em;
+	}
+	to {
+		left:  random(2) / 84 + em;
+		top: random(10) * 8 + px;
+	}
+}
+@keyframes ap-3 {
+	from {
+		left: random(50) * 10 + em;
+		top: - random(45) * 4 + em;
+	}
+	to {
+		left: - random(95) * 4 + em;
+		top: (random(10) - 7 + em);
+	}
+}
+  </style>
+  </html>
